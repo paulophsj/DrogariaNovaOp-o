@@ -1,0 +1,269 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+header {
+  background-color: #f71717;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.produto {
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.produto h3 {
+  margin-bottom: 10px;
+}
+
+.produto p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.produto button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.produto button:hover {
+  background-color: #0056b3;
+}
+.carrinho {
+  width: 20%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.carrinho h3 {
+  margin-bottom: 20px;
+}
+.btn {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: lightgray;
+  color: black;
+  text-decoration: none;
+}
+.btn-sair {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-sair:hover {
+  background-color: #c82333;
+}
+.btn-sobre {
+  background-color: #17a2b8;
+  color: white;
+}
+.btn-sobre:hover {
+  background-color: #138496;
+}
+.sobre-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+.sobre-botao {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sobre-botao:hover {
+  background-color: #0056b3;
+}
+.container-finalizar {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: fit-content;
+  justify-self: center;
+  > h1 {
+    margin-bottom: 20px;
+  }
+  > button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin: 5px;
+  }
+  > button:hover {
+    background-color: #0069d9;
+  }
+}
+.form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > label,
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 20px;
+  }
+}
+.loader{
+  width: 30px;
+  height: 30px;
+  border: 4px solid red;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: infinite carregando 0.3s linear;
+}
+@keyframes carregando {
+  100%{transform: rotate(360deg);}
+}
+.btn-excluir{
+  background-color:#dc3545;
+  color: white;
+}
+.btn-excluir:hover{
+  background-color: #f71717;
+}
+.div-editar{
+  display: flex;
+  flex-direction: column;
+  >.span-editar{
+    display: flex;
+    gap: 10px;
+    >.btn-editar{
+      width: 150px;
+    }
+  }
+}
+textarea {
+  max-width: 100%;   /* Largura máxima de 100% do seu elemento pai */
+  max-height: 200px; /* Altura máxima de 200px */
+}
+.App {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  > .cart {
+    margin-top: 20px;
+    > h2 {
+      margin-bottom: 15px;
+    }
+    > table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+  }
+  >.total {
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  >button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  >button:hover {
+    background-color: #45a049;
+  }
+}
+
+th {
+  background-color: #f8f8f8;
+}
+.btn-header{
+  top: 20px;
+  text-decoration: none;
+  position: fixed;
+  width: 150px;
+}
+.btn-left{
+  left: 20px;
+}
+.btn-right{
+  right: 20px;
+}
+@media screen and (max-width: 800px){
+  #main{
+    flex-direction: column-reverse;
+  }
+  .produto, .carrinho{
+    width: 80%;
+    padding: 5px;
+    text-align: center;
+  }
+  .div-editar{
+    justify-content: center;
+    align-items: center;
+  }
+  .form{
+    width: 70%;
+  }
+  .cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .carrinho{
+    top: 10px;
+    position: sticky;
+  }
+  .btn-header {
+    width: 80px;
+  }
+  .btn-right{
+    right: 50px;
+  }
+  .btn-left{
+    left: 50px;
+  }
+}
